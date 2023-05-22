@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/registration.css">
+</head>
+<body>
+    <h1>Registration</h1>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form action="/registration/" method="POST">
+        <label for="name">Full name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
